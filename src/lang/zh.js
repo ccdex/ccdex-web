@@ -17,14 +17,15 @@ module.exports = {
     section2:{
         title:'产品/组件介绍 DEX + 交易协议 + 公链',
         label1:'跨链去中心化交易所',
-        label1_des1:'支持主流加密数字资产',
-        label1_des2:'友好的用户体验',
+        label1_des1:'·支持主流加密数字资产',
+        label1_des2:'·友好的用户体验',
         label2:'新一代交易协议',
-        label2_des1:'高性能内存撮合挖矿算法',
-        label2_des2:'DEX间流动性共享机制',
+        label2_des1:'·高性能内存撮合挖矿算法',
+        label2_des2:'·DEX间流动性共享机制',
         label3:'全新区块链交易底座',
-        label3_des1:'去中心化跨链协议(DCCP)',
-        label3_des2:'易扩展的二层网络架构',
+        label3_des1:'·去中心化跨链协议(DCCP)',
+        label3_des2:'·易扩展的二层网络架构',
+        btn:'查看详情'
     },
 
     section3:{

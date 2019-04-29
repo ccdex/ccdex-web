@@ -1,18 +1,19 @@
 <template>
     <section>
         <Header></Header>
-        <section class = "section1">
+        <section class = "section1">       
             <img class = "star1" src="../assets/star1.png" alt="">
             <img class = "star2" src="../assets/star2.png" alt="">
             <!-- <div class = "section1-wrapper">     -->
                 <p class = "label">{{LANG.section1.label1}}<br>
                 {{LANG.section1.label2}}</p>
                 <img class = "light" src="../assets/light.png" alt="">  
-                <span class = "btn btn-start">{{LANG.section1.btn1}}</span> 
-                <span class = "btn btn-create">{{LANG.section1.btn2}}</span>           
+                <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
+                <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span>     
+                      
             <!-- </div> -->
         </section>
-
+        
         <section class = "section section2">
             <p class = "title">{{LANG.section2.title}}</p>
             <div class = "content">
@@ -20,14 +21,23 @@
                     <img src="../assets/section2-left.png" class = "section2-image-left" alt="">
                     <p class = "label">{{LANG.section2.label1}}<br>(CCDEX)
                     </p>
+                    <p class = "sec2-des">{{LANG.section2.label1_des1}}<br>
+                    {{LANG.section2.label1_des2}}</p>
+                    <span class = "btn-detail">{{LANG.section2.btn}}</span>
                 </div>
                 <div class = "box">
                     <img src="../assets/section2-middle.png" class = "section2-image-middle" alt="">
                     <p class = "label">{{LANG.section2.label2}}<br>(Xprotocol)</p>
+                     <p class = "sec2-des">{{LANG.section2.label2_des1}}<br>
+                    {{LANG.section2.label2_des2}}</p>
+                     <span class = "btn-detail">{{LANG.section2.btn}}</span>
                 </div>
                 <div class = "box">
                     <img src="../assets/section2-right.png"  class = "section2-image-right" alt="">
                     <p class = "label">{{LANG.section2.label3}}</p>
+                     <p class = "sec2-des">{{LANG.section2.label3_des1}}<br>
+                    {{LANG.section2.label3_des2}}</p>
+                     <span class = "btn-detail">{{LANG.section2.btn}}</span>
                 </div>
             </div>
         </section>
@@ -100,28 +110,6 @@
 
         <section class = "section section6">
               <p class = "title">{{LANG.section6.title}}</p>
-              <!-- <table>
-                   <thead>
-                    <tr>
-                        <td>{{LANG.section6.header1}}</td>
-                        <td>{{LANG.section6.header2}}</td>
-                        <td>CCDEX</td>
-                        <td>Ox Protocol</td>
-                        <td>Binance DEX</td>
-                        <td>CEX</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{LANG.section6.line2col1}}</td>
-                        <td>
-                            <p>1</p>
-                            <p>2</p>
-                            <p>3</p>
-                        </td>
-                    </tr>
-                </tbody>
-              </table> -->
         </section>
        <Footer></Footer>
     </section>
@@ -129,22 +117,34 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { config } from "@/config";
 export default {
   components: {
     Header,
     Footer
+  },
+
+  mounted() {},
+  methods: {
+    routeExchange() {
+      window.location = config.exchangeUrl;
+    },
+    routeWallet() {
+      window.location = config.walletUrl;
+    }
   }
 };
 </script>
 <style lang="scss" scoped>
 @import "@/styles/base.scss";
 .section1 {
+  z-index: 1;
   width: 100%;
   height: Rem(700);
-  background: url("../assets/background1.png");
+  background-image: url("../assets/background1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   .star1 {
     position: absolute;
@@ -160,53 +160,45 @@ export default {
     width: Rem(166);
     height: Rem(159);
   }
-  //   .section1-wrapper {
-  //       position: relative;
-  //       height: 525px;
-  //       margin:0 auto;
-  //       width:1140px;
   .label {
-    // position: absolute;
-    // top: Rem(263);
-    // left: Rem(392);
     font-size: Rem(40);
-    margin:Rem(263) 0 0 Rem(392);
+    margin: Rem(263) 0 0 Rem(392);
     text-align: right;
-    width:Rem(530);
+    width: Rem(530);
   }
-//   .label{
-//     position: absolute;
-//     top: Rem(263);
-//     left: Rem(392);
-//     font-size: Rem(40);
-//   }
   .light {
     position: absolute;
     width: Rem(591);
     height: Rem(466);
     top: Rem(115);
     left: Rem(943);
+    -webkit-animation: animations_light 1s linear infinite;
+    -moz-animation: animations_light 1s linear infinite;
+    animation: animations_light 1s linear infinite;
+    opacity: 1;
   }
-  .btn{
-      width:Rem(165);
-      height: Rem(50);
-      position: absolute;
-      top:Rem(446);
-      border-radius: 25px; 
-      display: inline-block;
-      font-size:Rem(15);
-      line-height:  Rem(50);
-      text-align: center;
-      cursor: pointer;
+
+  .btn {
+    width: Rem(165);
+    height: Rem(50);
+    position: absolute;
+    top: Rem(446);
+    border-radius: 25px;
+    display: inline-block;
+    font-size: Rem(15);
+    line-height: Rem(50);
+    text-align: center;
+    cursor: pointer;
+    z-index: 6;
   }
-  .btn-start{
-      left:Rem(550);
-      background-color:$green;
-      color:#FFFFFF;
+  .btn-start {
+    left: Rem(550);
+    background-color: $green;
+    color: #ffffff;
   }
-  .btn-create{
-      left:Rem(745);
-      border:1px solid #FFFFFF;
+  .btn-create {
+    left: Rem(745);
+    border: 1px solid #ffffff;
   }
 }
 //}
@@ -315,51 +307,80 @@ export default {
   background-image: url("../assets/background2.png");
   background-repeat: no-repeat;
   background-size: cover;
- .content{
-     width:Rem(735);
-     height: Rem(423);
-     .box{
-         margin-right:Rem(116);
-         position: relative;
-         .section2-image-left{
-             width:Rem(122);
-             height: Rem(118);
-             position: absolute;
-             left:0;
-             right:0;
-             margin:0 auto;
-             top:Rem(71);
-         }
-         .section2-image-middle{
-             width:Rem(122);
-             height: Rem(133);
-             position: absolute;
-             left:0;
-             right:0;
-             margin:0 auto;
-             top:Rem(56);
-         }
-         .section2-image-right{
-             width:Rem(128);
-             height: Rem(123);
-             position: absolute;
-             left:0;
-             right:0;
-             margin:0 auto;
-             top:Rem(66);
-         }
-         .label{
-             position: absolute;
-             font-size:Rem(16);
-             top:Rem(238);
-             left:0;
-             right:0;
-             font-weight: bold;
-         }
-     }
-     .box:last-child{
-         margin-right:0;
-     }
+  .content {
+    width: Rem(735);
+    height: Rem(423);
+    .box:hover {
+      border: 1px solid $green;
+    }
+    .box:hover .btn-detail {
+      display: inline-block;
+    }
+    .box {
+      border: none;
+      margin-right: Rem(116);
+      position: relative;
+      .section2-image-left {
+        width: Rem(122);
+        height: Rem(118);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: Rem(71);
+      }
+      .section2-image-middle {
+        width: Rem(122);
+        height: Rem(133);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: Rem(56);
+      }
+      .section2-image-right {
+        width: Rem(128);
+        height: Rem(123);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: Rem(66);
+      }
+      .label {
+        position: absolute;
+        font-size: Rem(16);
+        top: Rem(238);
+        left: 0;
+        right: 0;
+        font-weight: bold;
+      }
+      .sec2-des {
+        position: absolute;
+        font-size: Rem(12);
+        color: $gray;
+        top: Rem(294);
+      }
+      .btn-detail {
+        width: Rem(141);
+        height: Rem(28);
+        border-radius: 14px;
+        background-color: $green;
+        text-align: center;
+        line-height: Rem(28);
+        display: none;
+        font-size: Rem(16);
+        position: absolute;
+        bottom: Rem(29);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+    .box:last-child {
+      margin-right: 0;
+    }
   }
 }
 .section3 {
@@ -375,25 +396,38 @@ export default {
   background-color: $black4;
   height: Rem(1217);
   overflow: hidden;
-  table {
-    margin: Rem(235) auto;
-    thead {
-      font-size: Rem(20);
-      font-weight: bold;
-      border-bottom: 2px solid #FFFFFF;
-      tr {
-        border-bottom: 2px solid #FFFFFF;
-        td {
-          padding: Rem(30) Rem(80) Rem(30) Rem(20);
-        }
-      }
-    }
-    tbody {
-      font-size: Rem(20);
-    }
-    td {
-      padding: Rem(30) Rem(80) Rem(30) Rem(20);
-    }
+}
+@-webkit-keyframes animations_light {
+  0% {
+   opacity: 1;
+  }
+  50% {
+   opacity: 0.6;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-moz-keyframes animations_light {
+  0% {
+   opacity: 1;
+  }
+  50% {
+   opacity: 0.6;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes animations_light {
+  0% {
+   opacity: 1;
+  }
+  50% {
+   opacity: 0.6;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
 </style>

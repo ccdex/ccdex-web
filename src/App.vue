@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+     <router-view v-if="isRouterAlive"></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-
+  data(){
+    return{
+      isRouterAlive:true
+    }
+  },
   mounted() {
     this.init();
     var vm = this;

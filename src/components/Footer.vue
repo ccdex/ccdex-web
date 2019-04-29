@@ -25,8 +25,6 @@ export default {
     height: Rem(100);
     width: 100%;
     background-color: $black5;
-    position: fixed;
-    bottom:0;
     .footer-wrapper{
          width:Rem(1140);
          margin:0 auto;
