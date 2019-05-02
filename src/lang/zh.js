@@ -29,7 +29,7 @@ module.exports = {
     },
 
     section3:{
-        title:'创新点:去中心化跨链协议DCC Protocal',
+        title:'去中心化跨链协议DCC Protocal',
         label1:'技术特点',
         label1_des1:'- 基于MPC算法的安全可证方案',
         label1_des2:'- 在区块链核心层实现跨链协议',

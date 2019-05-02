@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 166 159" style="enable-background:new 0 0 166 159;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="23.285" y1="135.715" x2="135.715" y2="23.285">
+	<stop  offset="0" style="stop-color:#262748"/>
+	<stop  offset="1" style="stop-color:#353F5F"/>
+</linearGradient>
+<path class="st0" d="M79.5,0C123.4,0,159,35.6,159,79.5S123.4,159,79.5,159S0,123.4,0,79.5S35.6,0,79.5,0z"/>
+<g>
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="127.5901" y1="52.4099" x2="159.4099" y2="20.5901">
+			<stop  offset="0" style="stop-color:#3B496A"/>
+			<stop  offset="1" style="stop-color:#516E92"/>
+		</linearGradient>
+		<circle class="st1" cx="143.5" cy="36.5" r="22.5"/>
+	</g>
+</g>
+</svg>

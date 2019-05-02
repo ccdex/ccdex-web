@@ -66,11 +66,13 @@ export default {
 .header {
   height: Rem(100);
   background-color: $black1;
+  
   .header-wrapper {
     margin: 0 auto;
     width: Rem(1140);
     height: Rem(100);
     line-height: Rem(100);
+    min-width: 800px;
     img {
       width: Rem(158);
       height: Rem(45);
