@@ -1,11 +1,11 @@
 module.exports = {
     header: {
-      entry1: 'homepage',
-      entry2: 'exchange',
-      entry3: 'wallet',
-      entry4: 'block explorer',
-      entry5: 'document',
-      entry6: 'Chinese',
+      entry1: 'Home',
+      entry2: 'Exchange',
+      entry3: 'Wallet',
+      entry4: 'Explorer',
+      entry5: 'About',
+      entry6: '简体中文',
       entry7:'English'
     },
     section1: {
@@ -16,15 +16,15 @@ module.exports = {
     },
     section2:{
         title:'Core components of exchange platform',
-        label1:'Cross-chain decentralized Exchange',
+        label1:'Cross-chain decentralized exchange',
         label1_des1:'Support mainstream crypto-assets',
         label1_des2:'Friendly user experience',
-        label2:'New generation of transaction protocol',
+        label2:'New generation of decentralized exchange protocol',
         label2_des1:'Distributed memory matching engine',
-        label2_des2:'Transaction liquidity sharing mechanism between Exchanges',
-        label3:'Bran-new underlying trading platform on blockchain',
+        label2_des2:'Liquidity sharing mechanism between Exchanges',
+        label3:'Bran-new underlying exchange platform on blockchain',
         label3_des1:'Decentralized cross-chain protocol',
-        label3_des2:'Easily-extended two-tiered network architecture',
+        label3_des2:'Easily-scaling layer 2 network architecture',
         btn:'View detail'
     },
 
@@ -34,7 +34,7 @@ module.exports = {
         label1_des1:'Provable security scheme based on MPC algorithm',
         label1_des2:'Cross-chain protocol located in the core of blockchain',
         label2:'Application advantage',
-        label2_des1:'Support more than thousands of mainstream digital assets',
+        label2_des1:'Support more than thousands of mainstream crypto-assets',
         label2_des2:'Adaptive to different types of blockchain seamlessly', 
     },
 
@@ -44,7 +44,7 @@ module.exports = {
         label1_des1:'Call auction trading mechanism matched with Blockchain periodicity',
         label1_des2:'Maximization turnover as the most important matching rule',
         label2:'Application advantage',
-        label2_des1:'High-performance transaction matching',
+        label2_des1:'High-performance order matching',
         label2_des2:'Avoid front running to ensure fairness of transaction', 
     },
     section5:{
@@ -54,10 +54,10 @@ module.exports = {
         label1_des2:'Order sharing incentive mechanism based on Pareto optimality',
         label2:'Application advantage',
         label2_des1:'Cross-chain distributed Exchange confederation and ecology (DEX, wallets and quantization)',
-        label2_des2:'Abundant digital asset transaction applications', 
+        label2_des2:'Abundant digital assets DeFi applications', 
     },
     section6:{
-       title:'Compareing to other exchange platform'
+       title:'Compareing to other exchanges'
     },
 
     footer:{
