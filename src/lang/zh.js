@@ -10,7 +10,7 @@ module.exports = {
     },
     section1: {
         label1: '全球首个跨链去中心化交易所',
-        label2: '----让价值自由流动',
+        label2: '—— 让价值自由流动',
         btn1: '开始交易',
         btn2: '创建钱包'
     },

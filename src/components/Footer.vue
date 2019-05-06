@@ -2,14 +2,14 @@
     <section class = "footer">
         <div class = "footer-wrapper">
             <ul class = "ul-left">
-                <li><img src="../assets/wechat.png" alt=""></li>
-                <li><img src="../assets/phone.png" alt=""></li>
-                <li><img src="../assets/email.png" alt=""></li>
+                <li><img src="../assets/wechat.svg" alt=""></li>
+                <li><img src="../assets/phone.svg" alt=""></li>
+                <li><img src="../assets/email.svg" alt=""></li>
             </ul>
             <span>© 2018 - 2019 CCDEX. All rights reserved.</span>
             <ul class = "ul-right">
-                <li><img src="../assets/github.png" alt=""></li>
-                <li><img src="../assets/twitter.png" alt=""></li>
+                <li><img src="../assets/git.svg" alt=""></li>
+                <li><img src="../assets/twitter.svg" alt=""></li>
             </ul>
         </div>
     </section>
@@ -32,7 +32,7 @@ export default {
          line-height: Rem(100);
          text-align: center;
          font-size:Rem(12);
-         color:$footerFont;
+         color:#FFFFFF;
          .ul-left{
              list-style:none;
              float:left;

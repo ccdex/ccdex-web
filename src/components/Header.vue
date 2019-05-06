@@ -9,19 +9,12 @@
                 <li class = "nav-li"><a :href = "explorerUrl">{{LANG.header.entry4}}</a></li>
                 <li class = "nav-li"><span>{{LANG.header.entry5}}</span></li>
                 <li class = "nav-li li-lan">
-                  <img class = "lan-img" :src = "currentLan ==='zh'?require('../assets/zh.png'):require('../assets/en.png')" alt="">
+                  <img class = "lan-img" src = "../assets/earth.png" alt="">
                   {{currentLan==='zh'?LANG.header.entry6:LANG.header.entry7}}
-                  <span class = "sanjiao"></span> 
-                   <ul class = "ul-lan">
-                     <li @click = "changeToZh">
-                      <img class = "lan-img" src = '../assets/zh.png' alt="">
-                       {{LANG.header.entry6}}
-                     </li>
-                     <li @click = "changeToEn">
-                       <img class = "lan-img" src = "../assets/en.png" alt="">
-                       {{LANG.header.entry7}}
-                     </li>
-                   </ul> 
+                   <div class = "ul-lan">
+                     <p @click = "changeToZh">{{LANG.header.entry6}}</p>
+                     <p @click = "changeToEn">{{LANG.header.entry7}}</p>
+                   </div> 
                 </li>
             </ul>
         </div>
@@ -66,13 +59,12 @@ export default {
 .header {
   height: Rem(100);
   background-color: $black1;
-  
   .header-wrapper {
     margin: 0 auto;
     width: Rem(1140);
     height: Rem(100);
     line-height: Rem(100);
-    min-width: 800px;
+    //min-width: 800px;
     img {
       width: Rem(158);
       height: Rem(45);
@@ -85,7 +77,7 @@ export default {
       list-style: none;
       margin: 0;
       .nav-li {
-        font-size: Rem(14);
+        font-size: Rem(20);
         float: left;
         margin-left: Rem(40);
         cursor: pointer;
@@ -99,40 +91,27 @@ export default {
       }
       .li-lan {
         position: relative;
-        .sanjiao {
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-top: 5px solid #ffffff;
-          display: inline-block;
-          margin-left: Rem(20);
-        }
         .lan-img {
-          width: Rem(16);
-          height: Rem(16);
+          width: Rem(20);
+          height: Rem(20);
           margin-right: Rem(10);
         }
         .ul-lan {
           display: none;
           position: absolute;
-          list-style: none;
           top: Rem(66);
           right: Rem(4);
           z-index: 6;
-          li {
-            height: Rem(30);
-            line-height: Rem(30);
-            width: Rem(112);
+          p{
             background-color: $black2;
-            .lan-img {
-              width: Rem(16);
-              height: Rem(16);
-              margin-right: Rem(10);
-              margin-left: Rem(16);
+            padding:0 Rem(10);
+            width:Rem(80);
+            line-height: Rem(40);
+            text-align: center;
             }
+            
           }
-          li:hover {
+          p:hover {
             color: $green;
           }
         }
@@ -141,50 +120,10 @@ export default {
         .ul-lan {
           display: block;
         }
-        .sanjiao {
-          -webkit-animation: animations 0.1s linear;
-          -moz-animation: animations 0.1s linear;
-          animation: animations 0.1s linear;
-          transform: rotate(180deg);
-        }
-        @-webkit-keyframes animations {
-          0% {
-            -webkit-transform: rotate(0);
-          }
-          50% {
-            -webkit-transform: rotate(90deg);
-          }
-          100% {
-            -webkit-transform: rotate(180deg);
-          }
-        }
-        @-moz-keyframes animations {
-          0% {
-            -moz-transform: rotate(0);
-          }
-          50% {
-            -moz-transform: rotate(90deg);
-          }
-          100% {
-            -moz-transform: rotate(180deg);
-          }
-        }
-        @keyframes animations {
-          0% {
-            transform: rotate(0);
-          }
-          50% {
-            transform: rotate(90deg);
-          }
-          100% {
-            transform: rotate(180deg);
-          }
-        }
       }
       .nav-li:hover span {
         color: $green;
       }
     }
   }
-}
 </style>
