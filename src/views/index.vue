@@ -78,7 +78,7 @@
                     <p class = "label">{{LANG.section3.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section3.label2_des1}}<br>
-                        {{LANG.section3.label1_des2}}</p>
+                        {{LANG.section3.label2_des2}}</p>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     <p class = "label">{{LANG.section4.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section4.label2_des1}}<br>
-                        {{LANG.section4.label1_des2}}</p>
+                        {{LANG.section4.label2_des2}}</p>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                     <p class = "label">{{LANG.section5.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section5.label2_des1}}<br>
-                        {{LANG.section5.label1_des2}}</p>
+                        {{LANG.section5.label2_des2}}</p>
                     </div>
                 </div>
             </div>
@@ -178,6 +178,7 @@ export default {
 @import "@/styles/base.scss";
 .homepage {
   .section1 {
+    overflow-x:hidden;
     z-index: 1;
     width: 100%;
     height: Rem(700);
@@ -337,9 +338,9 @@ export default {
             top: Rem(386);
             left: 0;
             right: 0;
-
+            text-align: center;
             .des {
-              text-align: left;
+              text-align: center;
               font-size: Rem(18);
               color: $gray;
             }
@@ -362,7 +363,7 @@ export default {
             height: Rem(250);
           }
           .label {
-            font-size: Rem(18);
+            font-size: Rem(20);
             position: absolute;
             top: Rem(350);
             left: 0;
@@ -374,9 +375,9 @@ export default {
             top: Rem(386);
             left: 0;
             right: 0;
-            text-align: left;
+            text-align: center;
             .des {
-              font-size: Rem(16);
+              font-size: Rem(18);
               color: $gray;
             }
           }
@@ -466,7 +467,7 @@ export default {
           }
         }
         .label {
-          font-size: Rem(18);
+          font-size: Rem(20);
           top: Rem(238);
           font-weight: bold;
           margin-bottom: Rem(20);
@@ -474,7 +475,7 @@ export default {
         }
         .sec2-des {
           padding: 0 Rem(12);
-          font-size: Rem(16);
+          font-size: Rem(18);
           color: $gray;
           margin-bottom: Rem(36);
           line-height: Rem(24);

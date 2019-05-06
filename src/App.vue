@@ -13,11 +13,11 @@ export default {
     }
   },
   mounted() {
-    // this.init();
-    // var vm = this;
-    // window.onresize = function(){
-    //     vm.init();
-    //   }
+    this.init();
+    var vm = this;
+    window.onresize = function(){
+        vm.init();
+      }
   },
   methods: {
      init(){
