@@ -3,10 +3,10 @@ module.exports = {
       entry1: '主页',
       entry2: '交易所',
       entry3: '钱包',
-      entry4: '区块浏览器',
+      entry4: '浏览器',
       entry5: '文档',
       entry6: '中文',
-      entry7: '英文'
+      entry7: 'English'
     },
     section1: {
         label1: '全球首个跨链去中心化交易所',
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     section3:{
-        title:'去中心化跨链协议 DCC Protocol',
+        title:'去中心化跨链协议',
         label1:'技术特点',
         label1_des1:'- 基于MPC算法的可证明安全方案',
         label1_des2:'- 位于区块链核心的跨链协议',
@@ -40,7 +40,7 @@ module.exports = {
     },
 
     section4:{
-        title:'分布式内存撮合引擎 Pul Matching Engine',
+        title:'分布式内存撮合引擎',
         label1:'技术特点',
         label1_des1:'- 与区块周期匹配的集合竞价撮合算法',
         label1_des2:'- 以成交总量最大化为首要撮合规则',
@@ -51,7 +51,7 @@ module.exports = {
     section5:{
         title:' 交易所流动性共享机制',
         label1:'技术特点',
-        label1_des1:'- 交易所共享订单池 Order Sharing Pool',
+        label1_des1:'- 交易所共享订单池',
         label1_des2:'- 基于帕累托最优的订单共享激励机制',
         label2:'应用优势',
         label2_des1:'- 跨链去中心化交易所联盟及生态（DEX、钱包、量化等）',
