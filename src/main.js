@@ -3,10 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui';
-Vue.use(ElementUI);
+// import ElementUI from 'element-ui';
+// Vue.use(ElementUI);
+import {Popover} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+Vue.use(Popover)
 Vue.config.productionTip = false
 let langZh = require('@/lang/zh')
 let langEn = require('@/lang/en')
