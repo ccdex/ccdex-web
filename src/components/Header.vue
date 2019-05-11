@@ -1,7 +1,7 @@
 <template>
     <section class = "header">
         <div class = "header-wrapper">
-            <img src="../assets/logo.png" alt="">
+            <img src="../assets/logo.png" alt="" class = "logo">
             <ul class = "nav">
                 <li class = "nav-li"><span>{{LANG.header.entry1}}</span></li>
                 <li class = "nav-li"><a :href = "exchangeUrl">{{LANG.header.entry2}}</a></li>

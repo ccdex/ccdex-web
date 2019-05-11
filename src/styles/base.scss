@@ -1,14 +1,18 @@
 @function Rem($px){
     //@return  $px / 16 * 1rem;
-    //@return  $px / 100 * 1rem;
-    @return $px * 1px;
+    @return  $px / 100 * 1rem;
+    // @return $px * 1px;
  }
+@function toRem($px){
+    @return  $px / 100 * 1rem;
+}
 
 $black1:#25203E;
 $black2:#213053;
 $black3:#22294A;
 $black4:#252442;
 $black5:#12161C;
+$black6:#2D3660;
 $footerFont:#33374A;
 $green:#1ED4CA;
 

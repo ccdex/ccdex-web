@@ -2,14 +2,27 @@
     <section class = "footer">
         <div class = "footer-wrapper">
             <ul class = "ul-left">
-                <li><img src="../assets/wechat.svg" alt=""></li>
-                <li><img src="../assets/phone.svg" alt=""></li>
-                <li><img src="../assets/email.svg" alt=""></li>
+                <li>
+                    <el-popover  placement="top-start" width="150" trigger="hover">
+                    <img src="../assets/wechat.png" style = "width:150px;height:150px">
+                    <img src="../assets/wechat.svg" slot="reference" alt="">
+                    </el-popover>             
+                </li>
+                <li>
+                    <el-popover  placement="top-start" width="200" trigger="hover" content="connect@ccdex.top">
+                    <img src="../assets/email.svg" slot="reference" alt="">
+                    </el-popover>
+                </li>
+                <li>
+                    <a href = "https://twitter.com/@CCDEX_TOP"><img src="../assets/twitter.svg" slot = "reference" alt=""></a>
+                </li>
             </ul>
             <span>© 2018 - 2019 CCDEX. All rights reserved.</span>
             <ul class = "ul-right">
-                <li><img src="../assets/git.svg" alt=""></li>
-                <li><img src="../assets/twitter.svg" alt=""></li>
+                <li><a href="https://github.com/ccdex"><img src="../assets/git.svg" alt=""></a></li>
+                <li><a href="https://www.jianshu.com/u/27eb10f2f410"><img src="../assets/jianshu.svg" alt=""></a></li>
+                <li><a href="https://medium.com/@ccdex"><img src="../assets/blog.svg" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/ccdex/"><img src="../assets/linkin.svg" alt=""></a></li>
             </ul>
         </div>
     </section>

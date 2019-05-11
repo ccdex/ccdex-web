@@ -9,10 +9,11 @@ module.exports = {
       entry7: 'English'
     },
     section1: {
-        label1: 'The world’s first cross-chain decentralized exchange',
-        label2: '—— Make value flow unrestrictedly',
-        btn1: 'Start trading',
-        btn2: 'Create wallet'
+        label1: 'The world’s first ',
+        label3: 'Cross-Chain',
+        label4:' DEX',
+        label2: 'Realize free flow of value',
+        btn: 'Try Testnet',
     },
     section2:{
         title:'Core components of exchange platform',

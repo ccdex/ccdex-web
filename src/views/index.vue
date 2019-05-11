@@ -5,13 +5,18 @@
           <div class = "section1-wrapper">   
             <!-- <img class = "star1" src="../assets/star1.svg" alt="">
             <img class = "star2" src="../assets/star2.svg" alt=""> -->
-              <div class = "left-container">
-                <p class = "label">{{LANG.section1.label1}}<br>
-                {{LANG.section1.label2}}</p>
-                <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
-                <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span>    
-              </div>
+             
+                <p class = "label">
+                  <span>{{LANG.section1.label1}}</span>
+                  <span class = "highlight">{{LANG.section1.label3}}</span>
+                  <span>{{LANG.section1.label4}}</span>
+                </p>
+                <p class = "sec-label">{{LANG.section1.label2}}</p>
+                <!-- <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
+                <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span>     -->
                 
+                <span class = "try" @click = "routeExchange()">{{LANG.section1.btn}}</span>
+
                 <div class = "light-box">
                   <img class = "light" src="../assets/light.png" alt="">  
                   <img class = "spot spot1" src="../assets/btc.svg" alt="">
@@ -31,8 +36,7 @@
                     <div class = "outer-round">
                       <div class = "inner-round"></div>
                     </div>
-                    <p class = "label">{{LANG.section2.label1}}<br>(CCDEX)
-                    </p>
+                    <p class = "label">{{LANG.section2.label1}}</p>
                    <p class = "sec2-des">{{LANG.section2.label1_des1}}<br>
                     {{LANG.section2.label1_des2}}</p>
                     <span class = "btn-detail">{{LANG.section2.btn}}</span>
@@ -42,7 +46,7 @@
                     <div class = "outer-round">
                       <div class = "inner-round"></div>
                     </div>
-                    <p class = "label">{{LANG.section2.label2}}<br>(Xprotocol)</p>
+                    <p class = "label">{{LANG.section2.label2}}</p>
                      <p class = "sec2-des">{{LANG.section2.label2_des1}}<br>
                     {{LANG.section2.label2_des2}}</p>
                     <span class = "btn-detail">{{LANG.section2.btn}}</span>
@@ -192,7 +196,8 @@ export default {
       width: Rem(1140);
       height: Rem(700);
       position: relative;
-      overflow: auto;
+      overflow: hidden;
+      text-align: center;
       .star1 {
         position: absolute;
         top: Rem(68);
@@ -213,46 +218,43 @@ export default {
         -moz-animation: animations_star2 3s linear infinite;
         animation: animations_star2 3s linear infinite;
       }
-      .left-container {
-        width: Rem(588);
+    
         .label {
-          font-size: Rem(40);
-          margin: Rem(219) 0 0 0;
-          text-align: left;
+          font-size: Rem(60);
+          margin: Rem(200) auto Rem(70);
+          font-weight: bold;
+          .highlight{
+            color:$green;
+          }
         }
-        .btn {
-          width: Rem(165);
-          height: Rem(50);
+        .sec-label{
+          font-size:Rem(36);
+        }
+        .try {
+          padding:Rem(20) Rem(30);
           border-radius: 25px;
           display: inline-block;
-          font-size: Rem(15);
-          line-height: Rem(50);
+          font-size: Rem(20);
+          line-height: Rem(20);
           text-align: center;
           cursor: pointer;
           z-index: 6;
-        }
-        .btn-start {
-          margin: Rem(75) Rem(30) 0 0;
           background-color: $green;
           color: #ffffff;
         }
-        .btn-create {
-          // left: Rem(745);
-          border: 1px solid #ffffff;
-        }
-      }
+  
       .light-box {
         position: absolute;
-        top: Rem(115);
-        right: Rem(26);
+        top: Rem(220);
+        right: 0;
 
         .light {
           width: Rem(591);
           height: Rem(466);
-          -webkit-animation: animations_light 1s linear infinite;
-          -moz-animation: animations_light 1s linear infinite;
-          animation: animations_light 1s linear infinite;
-          opacity: 1;
+          -webkit-animation: animations_light 3s linear infinite;
+          -moz-animation: animations_light 3s linear infinite;
+          animation: animations_light 3s linear infinite;
+          opacity: 0.3;
         }
         .spot {
           position: absolute;
@@ -263,6 +265,7 @@ export default {
           // left:Rem(280);
           top: Rem(150);
           left: Rem(276);
+          opacity: 0.3;
         }
         .spot1 {
           -webkit-animation: animations_spot1 3s linear infinite;
@@ -274,6 +277,11 @@ export default {
           -moz-animation: animations_spot2 3s linear infinite;
           animation: animations_spot2 3s linear infinite;
         }
+      }
+    }
+    @media screen and (max-width:480px){
+      .section1-wrapper {
+        width: 100%;
       }
     }
   }
@@ -338,9 +346,10 @@ export default {
             top: Rem(386);
             left: 0;
             right: 0;
-            text-align: center;
+            text-align: left;
+            padding:0 Rem(30);
             .des {
-              text-align: center;
+              text-align: left;
               font-size: Rem(18);
               color: $gray;
             }
@@ -375,11 +384,23 @@ export default {
             top: Rem(386);
             left: 0;
             right: 0;
-            text-align: center;
+            text-align: left;
+            padding:0 Rem(30);
             .des {
               font-size: Rem(18);
               color: $gray;
             }
+          }
+        }
+      }
+    }
+    @media screen and (max-width:480px){
+      .section-wrapper{
+        width: 100%;
+        .content{
+          display: block;
+          .box{
+            width:100%;
           }
         }
       }
@@ -522,57 +543,45 @@ export default {
         height: Rem(859);
         margin: 0 auto;
       }
+       @media screen and (max-width:480px){
+         .table{
+           width:100%;
+         }
+      }
     }
   }
+ 
   @-webkit-keyframes animations_light {
-    0% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0.9;
+     0% {
+      opacity: 0.3;
     }
     50% {
-      opacity: 0.8;
-    }
-    75% {
-      opacity: 0.9;
+      opacity: 0.1;
     }
     100% {
-      opacity: 1;
+      opacity: 0.3;
     }
   }
   @-moz-keyframes animations_light {
-    0% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0.9;
+   0% {
+      opacity: 0.3;
     }
     50% {
-      opacity: 0.8;
-    }
-    75% {
-      opacity: 0.9;
+      opacity: 0.1;
     }
     100% {
-      opacity: 1;
+      opacity: 0.3;
     }
   }
   @keyframes animations_light {
     0% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0.9;
+      opacity: 0.3;
     }
     50% {
-      opacity: 0.8;
-    }
-    75% {
-      opacity: 0.9;
+      opacity: 0.1;
     }
     100% {
-      opacity: 1;
+      opacity: 0.3;
     }
   }
   @-webkit-keyframes animations_spot1 {

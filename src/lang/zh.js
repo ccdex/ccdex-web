@@ -5,14 +5,13 @@ module.exports = {
       entry3: '钱包',
       entry4: '浏览器',
       entry5: '文档',
-      entry6: '中文',
+      entry6: '简体中文',
       entry7: 'English'
     },
     section1: {
         label1: '全球首个跨链去中心化交易所',
-        label2: '—— 让价值自由流动',
-        btn1: '开始交易',
-        btn2: '创建钱包'
+        label2: '让价值自由流动',
+        btn: '测试网',    
     },
     section2:{
         title:'核心组件 DEX + 交易协议 + 公链',
