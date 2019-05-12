@@ -158,7 +158,7 @@ export default {
   data() {
     let lan = localStorage.getItem("CCDEX_LANGUAGE_TYPE");
     let currentLan;
-    if (!lan || lan === "zh") {
+    if (lan && lan === "zh") {
       currentLan = "zh";
     } else {
       currentLan = "en";

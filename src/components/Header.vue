@@ -4,16 +4,16 @@
             <img src="../assets/logo.png" alt="" class = "logo">
             <ul class = "nav">
                 <li class = "nav-li"><span>{{LANG.header.entry1}}</span></li>
-                <li class = "nav-li"><a :href = "exchangeUrl">{{LANG.header.entry2}}</a></li>
-                <li class = "nav-li"><a :href = "walletUrl">{{LANG.header.entry3}}</a></li>
-                <li class = "nav-li"><a :href = "explorerUrl">{{LANG.header.entry4}}</a></li>
+                <li class = "nav-li"><a :href = "exchangeUrl" target="view_window">{{LANG.header.entry2}}</a></li>
+                <li class = "nav-li"><a :href = "walletUrl" target="view_window">{{LANG.header.entry3}}</a></li>
+                <li class = "nav-li"><a :href = "explorerUrl" target="view_window">{{LANG.header.entry4}}</a></li>
                 <li class = "nav-li"><span>{{LANG.header.entry5}}</span></li>
                 <li class = "nav-li li-lan">
                   <img class = "lan-img" src = "../assets/earth.png" alt="">
-                  {{currentLan==='zh'?LANG.header.entry6:LANG.header.entry7}}
+                  {{currentLan==='zh'?'简体中文':'English'}}
                    <div class = "ul-lan">
-                     <p @click = "changeToZh">{{LANG.header.entry6}}</p>
-                     <p @click = "changeToEn">{{LANG.header.entry7}}</p>
+                     <p @click = "changeToZh">简体中文</p>
+                     <p @click = "changeToEn">English</p>
                    </div> 
                 </li>
             </ul>
@@ -26,7 +26,7 @@ export default {
   data() {
     let lan = localStorage.getItem("CCDEX_LANGUAGE_TYPE");
     let currentLan;
-    if (!lan || lan === "zh") {
+    if (lan && lan === "zh") {
       currentLan = "zh";
     } else {
       currentLan = "en";
@@ -43,12 +43,12 @@ export default {
     changeToZh() {
       localStorage.setItem("CCDEX_LANGUAGE_TYPE", "zh");
       this.currentLan = "zh";
-      this.$router.go(0);
+      location.reload()
     },
     changeToEn() {
       localStorage.setItem("CCDEX_LANGUAGE_TYPE", "en");
       this.currentLan = "en";
-      this.$router.go(0);
+      location.reload()
     }
   }
 };
@@ -105,7 +105,7 @@ export default {
           p{
             background-color: $black2;
             padding:0 Rem(10);
-            width:Rem(80);
+            width:Rem(100);
             line-height: Rem(40);
             text-align: center;
             }

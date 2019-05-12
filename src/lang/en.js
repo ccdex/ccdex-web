@@ -5,7 +5,7 @@ module.exports = {
       entry3: 'Wallet',
       entry4: 'Explorer',
       entry5: 'About',
-      entry6: '简体中文',
+      entry6: 'Chinese',
       entry7: 'English'
     },
     section1: {

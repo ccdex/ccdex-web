@@ -5,8 +5,7 @@ module.exports = {
       entry3: '钱包',
       entry4: '浏览器',
       entry5: '文档',
-      entry6: '简体中文',
-      entry7: 'English'
+      entry6: '简体中文'
     },
     section1: {
         label1: '全球首个跨链去中心化交易所',
