@@ -14,15 +14,15 @@
                     </el-popover>
                 </li>
                 <li>
-                    <a href = "https://twitter.com/@CCDEX_TOP" target="view_window"><img src="../assets/twitter.svg" slot = "reference" alt=""></a>
+                    <a href = "https://twitter.com/@CCDEX_TOP" target="_blank"><img src="../assets/twitter.svg" slot = "reference" alt=""></a>
                 </li>
             </ul>
             <span>© 2018 - 2019 CCDEX. All rights reserved.</span>
             <ul class = "ul-right">
-                <li><a href="https://github.com/ccdex" target="view_window"><img src="../assets/git.svg" alt=""></a></li>
-                <li><a href="https://www.jianshu.com/u/27eb10f2f410" target="view_window"><img src="../assets/jianshu.svg" alt=""></a></li>
-                <li><a href="https://medium.com/@ccdex" target="view_window"><img src="../assets/blog.svg" alt=""></a></li>
-                <li><a href="https://www.linkedin.com/in/ccdex/" target="view_window"><img src="../assets/linkin.svg" alt=""></a></li>
+                <li><a href="https://github.com/ccdex" target="_blank"><img src="../assets/git.svg" alt=""></a></li>
+                <li><a href="https://www.jianshu.com/u/27eb10f2f410" target="_blank"><img src="../assets/jianshu.svg" alt=""></a></li>
+                <li><a href="https://medium.com/@ccdex" target="_blank"><img src="../assets/blog.svg" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/ccdex/" target="_blank"><img src="../assets/linkin.svg" alt=""></a></li>
             </ul>
         </div>
     </section>

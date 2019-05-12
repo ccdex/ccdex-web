@@ -4,9 +4,9 @@
             <img src="../assets/logo.png" alt="" class = "logo">
             <ul class = "nav">
                 <li class = "nav-li"><span>{{LANG.header.entry1}}</span></li>
-                <li class = "nav-li"><a :href = "exchangeUrl" target="view_window">{{LANG.header.entry2}}</a></li>
-                <li class = "nav-li"><a :href = "walletUrl" target="view_window">{{LANG.header.entry3}}</a></li>
-                <li class = "nav-li"><a :href = "explorerUrl" target="view_window">{{LANG.header.entry4}}</a></li>
+                <li class = "nav-li"><a :href = "exchangeUrl" target="_blank">{{LANG.header.entry2}}</a></li>
+                <li class = "nav-li"><a :href = "walletUrl" target="_blank">{{LANG.header.entry3}}</a></li>
+                <li class = "nav-li"><a :href = "explorerUrl" target="_blank">{{LANG.header.entry4}}</a></li>
                 <li class = "nav-li"><span>{{LANG.header.entry5}}</span></li>
                 <li class = "nav-li li-lan">
                   <img class = "lan-img" src = "../assets/earth.png" alt="">

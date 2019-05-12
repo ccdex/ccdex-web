@@ -15,7 +15,7 @@
                 <!-- <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
                 <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span>     -->
                 
-                <a :href = "config.exchangeUrl" target="view_window" class = "try">{{LANG.section1.btn}}</a>
+                <a :href = "config.exchangeUrl" target="_blank" class = "try">{{LANG.section1.btn}}</a>
 
                 <div class = "light-box">
                   <img class = "light" src="../assets/light.png" alt="">  
