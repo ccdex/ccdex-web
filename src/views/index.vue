@@ -15,7 +15,7 @@
                 <!-- <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
                 <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span>     -->
                 
-                <span class = "try" @click = "routeExchange()">{{LANG.section1.btn}}</span>
+                <a :href = "config.exchangeUrl" target="view_window" class = "try">{{LANG.section1.btn}}</a>
 
                 <div class = "light-box">
                   <img class = "light" src="../assets/light.png" alt="">  
@@ -164,10 +164,13 @@ export default {
       currentLan = "en";
     }
     return {
-      currentLan: currentLan
+      currentLan: currentLan,
+      config:config
     };
   },
-  mounted() {},
+  mounted() {
+   
+  },
   methods: {
     routeExchange() {
       window.location = config.exchangeUrl;
@@ -183,7 +186,7 @@ export default {
 .homepage {
   .section1 {
     overflow-x:hidden;
-    z-index: 1;
+    z-index: 0;
     width: 100%;
     height: Rem(700);
     background-image: url("../assets/bg1.svg");
@@ -231,7 +234,7 @@ export default {
           font-size:Rem(36);
         }
         .try {
-          padding:Rem(20) Rem(30);
+          padding:Rem(20) Rem(40);
           border-radius: 25px;
           display: inline-block;
           font-size: Rem(20);
@@ -241,14 +244,16 @@ export default {
           z-index: 6;
           background-color: $green;
           color: #ffffff;
+          position: relative;
         }
   
       .light-box {
         position: absolute;
         top: Rem(220);
         right: 0;
-
+        z-index: 1;
         .light {
+          z-index:1;
           width: Rem(591);
           height: Rem(466);
           -webkit-animation: animations_light 3s linear infinite;
