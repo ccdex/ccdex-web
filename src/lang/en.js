@@ -9,7 +9,7 @@ module.exports = {
       entry7: 'English'
     },
     section1: {
-        label1: 'The world’s first ',
+        label1: 'The World’s First ',
         label3: 'Cross-Chain',
         label4:' DEX',
         label2: 'Realize free flow of value',
@@ -23,7 +23,7 @@ module.exports = {
         label2:'New generation of decentralized exchange protocol',
         label2_des1:'· Distributed memory matching engine',
         label2_des2:'· Liquidity sharing mechanism between Exchanges',
-        label3:'Bran-new underlying exchange platform on blockchain',
+        label3:'Brand-new underlying exchange platform on blockchain',
         label3_des1:'· Decentralized cross-chain protocol',
         label3_des2:'· Easily-scaling layer 2 network architecture',
         btn:'View detail'
