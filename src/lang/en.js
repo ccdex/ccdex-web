@@ -58,7 +58,7 @@ module.exports = {
         label2_des2:'- Abundant digital assets DeFi applications', 
     },
     section6:{
-       title:'Compareing to other exchanges'
+       title:'Feature Comparison'
     },
 
     footer:{

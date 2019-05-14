@@ -15,9 +15,9 @@ export default {
   mounted() {
     this.init();
     var vm = this;
-    window.onresize = function(){
-        vm.init();
-      }
+    // window.onresize = function(){
+    //     vm.init();
+    //   }
   },
   methods: {
      init(){

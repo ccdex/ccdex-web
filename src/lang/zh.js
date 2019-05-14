@@ -56,7 +56,7 @@ module.exports = {
         label2_des2:'- 丰富的数字资产交易应用',
     },
     section6:{
-        title:'与其他类型交易所对比',
+        title:'特性对比',
         header1:'评估类',
         header2:'评估项',
         line2col1:'安全性',

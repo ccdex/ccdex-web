@@ -7,12 +7,13 @@
             </section>
 
             <section class = "section1">
-                 <p class = "label">{{LANG.section1.label1}}<br>
-                {{LANG.section1.label2}}</p>
-                <div class = "btns">
-                    <span class = "btn btn-start" @click = "routeExchange()">{{LANG.section1.btn1}}</span> 
-                    <span class = "btn btn-create" @click = "routeWallet()">{{LANG.section1.btn2}}</span> 
-                </div>
+                 <p class = "label">
+                  <span>{{LANG.section1.label1}}</span>
+                  <span class = "highlight">{{LANG.section1.label3}}</span>
+                  <span>{{LANG.section1.label4}}</span>
+                </p>
+                <p class = "sec-label">{{LANG.section1.label2}}</p>
+                <a :href = "config.exchangeUrl" target="_blank" class = "try">{{LANG.section1.btn}}</a>
             </section>
 
             <section class = "section section2">
@@ -39,38 +40,55 @@
 
             <section class = "section section3">
                 <p class = "title">{{LANG.section3.title}}</p>
-                <div>
-                    <img src="../assets/section3-left.png" alt="">
-                    <p class = "label">{{LANG.section3.label1}}></p>
+                <div class = "box">
+                    <img src="../assets/section3-left.png" alt="" class = "section3-left">
+                    <p class = "label">{{LANG.section3.label1}}</p>
+                    <p class = "des">{{LANG.section3.label1_des1}}<br>
+                    {{LANG.section3.label1_des2}}
+                    </p>
                 </div>
-                <div>
-                    <img src="../assets/section3-right.png" alt="">
-                    <p class = "label">{{LANG.section3.label2}}></p>
+                <div class = "box">
+                    <img src="../assets/section3-right.png" alt="" class = "section3-right">
+                    <p class = "label">{{LANG.section3.label2}}</p>
+                     <p class = "des">{{LANG.section3.label2_des1}}<br>
+                    {{LANG.section3.label2_des2}}
+                    </p>
                 </div>
             </section>
 
              <section class = "section section4">
                 <p class = "title">{{LANG.section4.title}}</p>
-                <div>
-                    <img src="../assets/section4-left.png" alt="">
-                    <p class = "label">{{LANG.section4.label1}}></p>
+                <div class = "box">
+                    <img src="../assets/section4-left.png" alt="" class = "section4-left">
+                    <p class = "label">{{LANG.section4.label1}}</p>
+                     <p class = "des">{{LANG.section4.label1_des1}}<br>
+                    {{LANG.section4.label1_des2}}
+                    </p>
                 </div>
-                <div>
-                    <img src="../assets/section4-right.png" alt="">
-                    <p class = "label">{{LANG.section4.label2}}></p>
+                <div class = "box">
+                    <img src="../assets/section4-right.png" alt="" class = "section4-right">
+                    <p class = "label">{{LANG.section4.label2}}</p>
+                     <p class = "des">{{LANG.section4.label2_des1}}<br>
+                    {{LANG.section4.label2_des2}}
+                    </p>
                 </div>
             </section>
 
              <section class = "section section5">
                 <p class = "title">{{LANG.section5.title}}</p>
-                 <div>
-                    <img src="../assets/section5-left.png" alt="">
-                    <p class = "label">{{LANG.section5.label1}}></p>
-                    <p ></p>
+                 <div class = "box">
+                    <img src="../assets/section5-left.png" alt="" class = "section5-left">
+                    <p class = "label">{{LANG.section5.label1}}</p>
+                     <p class = "des">{{LANG.section5.label1_des1}}<br>
+                    {{LANG.section5.label1_des2}}
+                    </p>
                 </div>
-                <div>
-                    <img src="../assets/section5-right.png" alt="">
-                    <p class = "label">{{LANG.section5.label1}}></p>
+                <div class = "box">
+                    <img src="../assets/section5-right.png" alt="" class = "section5-right">
+                    <p class = "label">{{LANG.section5.label1}}</p>
+                     <p class = "des">{{LANG.section5.label1_des1}}<br>
+                    {{LANG.section5.label1_des2}}
+                    </p>
                 </div>
             </section>
 
@@ -93,7 +111,17 @@ export default {
     FooterMobile
   },
   data() {
-    return {};
+    let lan = localStorage.getItem("CCDEX_LANGUAGE_TYPE");
+    let currentLan;
+    if (lan && lan === "zh") {
+      currentLan = "zh";
+    } else {
+      currentLan = "en";
+    }
+    return {
+      currentLan: currentLan,
+      config:config
+    };
   }
 };
 </script>
@@ -124,31 +152,30 @@ export default {
       text-align: center;
       overflow: hidden;
       .label {
-        margin: toRem(169) 0 toRem(289);
-        font-size: toRem(93);
-      }
-      .btns {
-        width: toRem(1763);
-        margin: 0 auto toRem(151);
-        display: flex;
-        .btn {
-          flex: 1;
-          height: toRem(244);
-          display: inline-block;
-          border-radius: toRem(122);
-          line-height: toRem(244);
-          font-size: toRem(73);
-          margin-right: toRem(147);
+          font-size: toRem(93);
+          margin: toRem(200) auto toRem(70);
+          font-weight: bold;
+          .highlight{
+            color:$green;
+          }
         }
-        .btn-start {
+        .sec-label{
+          font-size:toRem(70);
+        }
+      .try {
+          padding:toRem(40) toRem(80);
+          border-radius: 25px;
+          display: inline-block;
+          font-size: toRem(73);
+          line-height: toRem(73);
+          text-align: center;
+          cursor: pointer;
+          z-index: 6;
           background-color: $green;
           color: #ffffff;
+          position: relative;
+          margin:toRem(80) auto toRem(100);
         }
-        .btn-create {
-          margin-right: 0;
-          border: 1px solid #ffffff;
-        }
-      }
     }
     .section {
       text-align: center;
@@ -159,9 +186,10 @@ export default {
         margin-top: toRem(255);
         padding: 0 toRem(200);
         font-weight: bold;
-        margin-bottom: toRem(300);
+        // margin-bottom: toRem(300);
       }
       .box {
+        margin-top:toRem(200);
         padding-bottom:toRem(200);
         border-bottom:1px solid #666666;
         .section2-left-image {
@@ -176,11 +204,36 @@ export default {
           width: toRem(975);
           height: toRem(937);
         }
+        .section3-left {
+          width: toRem(960);
+          height: toRem(689);
+        }
+        .section3-right {
+          width: toRem(1175);
+          height: toRem(864);
+        }
+        .section4-left {
+          width: toRem(958);
+          height: toRem(1030);
+        }
+        .section4-right {
+          width: toRem(979);
+          height: toRem(863);
+        }
+        .section5-left {
+          width: toRem(923);
+          height: toRem(865);
+        }
+        .section5-right {
+          width: toRem(980);
+          height: toRem(863);
+        }
         .label {
           margin-top: toRem(300);
           font-weight: lighter;
+          font-size:toRem(124);
         }
-        .sec2-des {
+        .sec2-des,.des {
           font-size: toRem(93);
           color: #cccccc;
           margin-top: toRem(200);
@@ -207,9 +260,14 @@ export default {
       text-align: center;
       background-color: $black4;
       overflow: hidden;
+      .title{
+        margin-top:toRem(255);
+        font-size:toRem(124);
+        font-weight: bold;
+      }
       .table {
         margin: toRem(215) auto;
-        width: toRem(1809);
+        width: 95%;
       }
     }
   }

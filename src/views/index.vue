@@ -19,8 +19,8 @@
 
                 <div class = "light-box">
                   <img class = "light" src="../assets/light.png" alt="">  
-                  <img class = "spot spot1" src="../assets/btc.svg" alt="">
-                  <img class = "spot spot2" src="../assets/eth.svg" alt="">
+                  <img class = "spot" id = "spot1" src="../assets/btc.svg" alt="">
+                  <img class = "spot" id = "spot2" src="../assets/eth.svg" alt="">
                 </div>
                 
                 </div>     
@@ -39,7 +39,7 @@
                     <p class = "label">{{LANG.section2.label1}}</p>
                    <p class = "sec2-des">{{LANG.section2.label1_des1}}<br>
                     {{LANG.section2.label1_des2}}</p>
-                    <span class = "btn-detail">{{LANG.section2.btn}}</span>
+                    <!-- <span class = "btn-detail">{{LANG.section2.btn}}</span> -->
                 </div>
                 <div class = "box">
                     <img src="../assets/section2-middle.png" class = "section2-image-middle" alt="">
@@ -49,7 +49,7 @@
                     <p class = "label">{{LANG.section2.label2}}</p>
                      <p class = "sec2-des">{{LANG.section2.label2_des1}}<br>
                     {{LANG.section2.label2_des2}}</p>
-                    <span class = "btn-detail">{{LANG.section2.btn}}</span>
+                    <!-- <span class = "btn-detail">{{LANG.section2.btn}}</span> -->
                 </div>
                 <div class = "box">
                     <img src="../assets/section2-right.png"  class = "section2-image-right" alt="">
@@ -59,7 +59,7 @@
                     <p class = "label">{{LANG.section2.label3}}</p>
                      <p class = "sec2-des">{{LANG.section2.label3_des1}}<br>
                     {{LANG.section2.label3_des2}}</p>
-                    <span class = "btn-detail">{{LANG.section2.btn}}</span>
+                    <!-- <span class = "btn-detail">{{LANG.section2.btn}}</span> -->
                 </div>
             </div>
           </div>
@@ -169,7 +169,16 @@ export default {
     };
   },
   mounted() {
-   
+   if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+           this.$router.push('/mobile')
+      }
+    var total = document.documentElement.clientHeight;
+    console.log(total)
+    var headerHight = document.getElementsByClassName('header')[0].offsetHeight;
+    document.getElementsByClassName('section1')[0].style.height = (total - headerHight)+'px' 
+
+    document.getElementById('spot1').classList.add('spot1');
+    document.getElementById('spot2').classList.add('spot2');
   },
   methods: {
     routeExchange() {
@@ -429,12 +438,12 @@ export default {
     }
     .content {
       width: Rem(850);
-      .box:hover {
-        border: 1px solid $green;
-      }
-      .box:hover .btn-detail {
-        display: inline-block;
-      }
+      // .box:hover {
+      //   border: 1px solid $green;
+      // }
+      // .box:hover .btn-detail {
+      //   display: inline-block;
+      // }
       .box {
         // border: 1px solid $green;
         line-height: 0;
