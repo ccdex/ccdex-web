@@ -8,8 +8,10 @@ module.exports = {
       entry6: '简体中文'
     },
     section1: {
-        label1: '全球首个跨链去中心化交易所',
+        label1: '全球首个',
         label2: '让价值自由流动',
+        label3: '跨链',
+        label4: '去中心化交易所',
         btn: '测试网',    
     },
     section2:{

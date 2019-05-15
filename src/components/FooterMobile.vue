@@ -1,11 +1,18 @@
 <template>
     <section class = "footer-mobile">
         <div class = "imgs">
-        <img src="../assets/email.svg" alt="">
-        <img src="../assets/git.svg" alt="">
-        <img src="../assets/twitter.svg" alt="">
-        <img src="../assets/wechat.svg" alt="">
-        <img src="../assets/phone.svg" alt="">  
+        <a href="https://github.com/ccdex" target="_blank"><img src="../assets/git.svg" alt=""></a>
+         <el-popover  placement="top-start" width="100" trigger="click" content="connect@ccdex.top">
+            <img src="../assets/email.svg" slot="reference" alt="">
+        </el-popover>
+        <a href="https://www.jianshu.com/u/27eb10f2f410" target="_blank"><img src="../assets/twitter.svg" alt=""></a>
+        <el-popover  placement="top" width="150" trigger="hover">
+            <img src="../assets/wechat.png" style = "width:150px;height:150px">
+            <img src="../assets/wechat.svg" slot="reference" alt="">
+        </el-popover> 
+        <a href="https://medium.com/@ccdex" target="_blank"><img src="../assets/blog.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/ccdex/" target="_blank"><img src="../assets/linkin.svg" alt=""></a>
+        <a href="https://medium.com/@ccdex" target="_blank"><img src="../assets/blog.svg" alt=""></a>
         </div>
         <p>© 2018 - 2019 CCDEX. All rights reserved.</p>
     </section>

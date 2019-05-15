@@ -173,10 +173,8 @@ export default {
            this.$router.push('/mobile')
       }
     var total = document.documentElement.clientHeight;
-    console.log(total)
     var headerHight = document.getElementsByClassName('header')[0].offsetHeight;
     document.getElementsByClassName('section1')[0].style.height = (total - headerHight)+'px' 
-
     document.getElementById('spot1').classList.add('spot1');
     document.getElementById('spot2').classList.add('spot2');
   },
@@ -232,21 +230,22 @@ export default {
       }
     
         .label {
-          font-size: Rem(60);
-          margin: Rem(200) auto Rem(70);
+          font-size: Rem(70);
+          margin: Rem(240) auto Rem(90);
           font-weight: bold;
           .highlight{
             color:$green;
           }
         }
         .sec-label{
-          font-size:Rem(36);
+          font-size:Rem(40);
+          margin-bottom:Rem(60);
         }
         .try {
           padding:Rem(20) Rem(40);
           border-radius: 25px;
           display: inline-block;
-          font-size: Rem(20);
+          font-size: Rem(30);
           line-height: Rem(20);
           text-align: center;
           cursor: pointer;
@@ -254,6 +253,7 @@ export default {
           background-color: $green;
           color: #ffffff;
           position: relative;
+          font-weight: bold;
         }
   
       .light-box {

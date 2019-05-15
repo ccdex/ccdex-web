@@ -1,12 +1,9 @@
 <template>
     <div class = "index-mobile">
         <HeaderMobile></HeaderMobile>
-        <section class = "body">
-            <section class = "section-bg">
+        <div class = "body">
+            <div class = "section-bg">
                 <img src="../assets/light.png" alt="" class = "light">
-            </section>
-
-            <section class = "section1">
                  <p class = "label">
                   <span>{{LANG.section1.label1}}</span>
                   <span class = "highlight">{{LANG.section1.label3}}</span>
@@ -14,8 +11,7 @@
                 </p>
                 <p class = "sec-label">{{LANG.section1.label2}}</p>
                 <a :href = "config.exchangeUrl" target="_blank" class = "try">{{LANG.section1.btn}}</a>
-            </section>
-
+            </div>
             <section class = "section section2">
                 <p class = "title">{{LANG.section2.title}}</p>
                 <div class = "box">
@@ -94,10 +90,10 @@
 
             <section class = "section-table">
                 <p class = "title">{{LANG.section6.title}}</p>
-                <img src = '../assets/en-table.svg' alt= "" class = "table">
+                <img :src = "currentLan==='zh'?require('../assets/table.svg'):require('../assets/en-table.svg')" alt= "" class = "table">
             </section>
 
-        </section>
+        </div>
         <FooterMobile></FooterMobile>
     </div>
 </template>
@@ -131,39 +127,37 @@ export default {
 .index-mobile {
   .body {
     .section-bg {
-      height: toRem(1043);
+      height:toRem(2234);
       width: 100%;
-      //background: red;
       background-image: url("../assets/bg-mobile.svg");
       background-size: cover;
+      background-position: center center;
       position: relative;
+      overflow: hidden;
+      text-align: center;
       .light {
         width: toRem(1297);
         height: toRem(1022);
         position: absolute;
-        top: toRem(22);
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+        bottom: toRem(209);
+        right: toRem(110);
+        opacity: 0.2;
       }
-    }
-    .section1 {
-      background-color: #000000;
-      text-align: center;
-      overflow: hidden;
       .label {
-          font-size: toRem(93);
-          margin: toRem(200) auto toRem(70);
+          font-size: toRem(155);
+          margin: toRem(428) auto toRem(139);
           font-weight: bold;
+          width:70%;
           .highlight{
             color:$green;
           }
         }
         .sec-label{
-          font-size:toRem(70);
+          font-size:toRem(93);
+          font-weight: bold;
         }
       .try {
-          padding:toRem(40) toRem(80);
+          padding:toRem(80) toRem(200);
           border-radius: 25px;
           display: inline-block;
           font-size: toRem(73);
@@ -174,7 +168,7 @@ export default {
           background-color: $green;
           color: #ffffff;
           position: relative;
-          margin:toRem(80) auto toRem(100);
+          margin:toRem(350) auto 0;
         }
     }
     .section {
