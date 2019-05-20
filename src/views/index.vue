@@ -32,7 +32,7 @@
             <img class = "line" src="../assets/line.png" alt="">
             <div class = "content">            
                 <div class = "box">                
-                    <img src="../assets/section2-left.png" class = "section2-image-left" alt="">
+                    <img src="../assets/section2-left.svg" class = "section2-image-left" alt="">
                     <div class = "outer-round">
                       <div class = "inner-round"></div>
                     </div>
@@ -42,7 +42,7 @@
                     <!-- <span class = "btn-detail">{{LANG.section2.btn}}</span> -->
                 </div>
                 <div class = "box">
-                    <img src="../assets/section2-middle.png" class = "section2-image-middle" alt="">
+                    <img src="../assets/section2-middle.svg" class = "section2-image-middle" alt="">
                     <div class = "outer-round">
                       <div class = "inner-round"></div>
                     </div>
@@ -52,7 +52,7 @@
                     <!-- <span class = "btn-detail">{{LANG.section2.btn}}</span> -->
                 </div>
                 <div class = "box">
-                    <img src="../assets/section2-right.png"  class = "section2-image-right" alt="">
+                    <img src="../assets/section2-right.svg"  class = "section2-image-right" alt="">
                     <div class = "outer-round">
                       <div class = "inner-round"></div>
                     </div>
@@ -70,7 +70,7 @@
             <p class = "title">{{LANG.section3.title}}</p>
              <div class = "content">
                 <div class = "box left">
-                    <img src="../assets/section3-left.png" alt="" class = "section3-image-left">
+                    <img src="../assets/section3-left.svg" alt="" class = "section3-image-left">
                     <p class = "label">{{LANG.section3.label1}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section3.label1_des1}}<br>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class = "box right">
-                    <img src="../assets/section3-right.png" alt="" class = "section3-image-right">
+                    <img src="../assets/section3-right.svg" alt="" class = "section3-image-right">
                     <p class = "label">{{LANG.section3.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section3.label2_des1}}<br>
@@ -94,7 +94,7 @@
              <p class = "title">{{LANG.section4.title}}</p>
               <div class = "content">
                 <div class = "box left">
-                    <img src="../assets/section4-left.png" alt="" class = "section4-image-left">
+                    <img src="../assets/section4-left.svg" alt="" class = "section4-image-left">
                     <p class = "label">{{LANG.section4.label1}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section4.label1_des1}}<br>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class = "box right">
-                    <img src="../assets/section4-right.png" alt="" class = "section4-image-right">
+                    <img src="../assets/section4-right.svg" alt="" class = "section4-image-right">
                     <p class = "label">{{LANG.section4.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section4.label2_des1}}<br>
@@ -118,7 +118,7 @@
              <p class = "title">{{LANG.section5.title}}</p>
               <div class = "content">
                 <div class = "box left">
-                    <img src="../assets/section5-left.png" alt="" class = "section5-image-left">
+                    <img src="../assets/section5-left.svg" alt="" class = "section5-image-left">
                     <p class = "label">{{LANG.section5.label1}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section5.label1_des1}}<br>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class = "box right">
-                    <img src="../assets/section5-right.png" alt="" class = "section5-image-right">
+                    <img src="../assets/section5-right.svg" alt="" class = "section5-image-right">
                     <p class = "label">{{LANG.section5.label2}}</p>
                     <div class = "des-section">
                         <p class = "des">{{LANG.section5.label2_des1}}<br>
@@ -175,6 +175,7 @@ export default {
     var total = document.documentElement.clientHeight;
     var headerHight = document.getElementsByClassName('header')[0].offsetHeight;
     document.getElementsByClassName('section1')[0].style.height = (total - headerHight)+'px' 
+    document.getElementsByClassName('section1-wrapper')[0].style.height = (total - headerHight)+'px' 
     document.getElementById('spot1').classList.add('spot1');
     document.getElementById('spot2').classList.add('spot2');
   },
@@ -195,16 +196,17 @@ export default {
     overflow-x:hidden;
     z-index: 0;
     width: 100%;
-    height: Rem(700);
+    min-height: 680px;
     background-image: url("../assets/bg1.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    overflow: auto;
+    overflow: hidden;
     .section1-wrapper {
+      overflow-x:hidden;
       margin: 0 auto;
       width: Rem(1140);
-      height: Rem(700);
+      min-height: 680px;
       position: relative;
       overflow: hidden;
       text-align: center;

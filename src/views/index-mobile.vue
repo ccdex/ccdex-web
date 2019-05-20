@@ -15,19 +15,19 @@
             <section class = "section section2">
                 <p class = "title">{{LANG.section2.title}}</p>
                 <div class = "box">
-                    <img src="../assets/section2-left.png" alt="" class = "section2-left-image">
+                    <img src="../assets/section2-left.svg" alt="" class = "section2-left-image">
                     <p class = "label">{{LANG.section2.label1}}</p>
                     <p class = "sec2-des">{{LANG.section2.label1_des1}}<br>
                     {{LANG.section2.label1_des2}}</p>
                 </div>
                 <div class = "box">
-                    <img src="../assets/section2-middle.png" alt="" class = "section2-middle-image">
+                    <img src="../assets/section2-middle.svg" alt="" class = "section2-middle-image">
                     <p class = "label">{{LANG.section2.label2}}</p>
                     <p class = "sec2-des">{{LANG.section2.label2_des1}}<br>
                     {{LANG.section2.label2_des2}}</p>
                 </div>
                 <div class = "box">
-                    <img src="../assets/section2-right.png" alt="" class = "section2-right-image">
+                    <img src="../assets/section2-right.svg" alt="" class = "section2-right-image">
                     <p class = "label">{{LANG.section2.label3}}</p>
                     <p class = "sec2-des">{{LANG.section2.label3_des1}}<br>
                     {{LANG.section2.label3_des2}}</p>
@@ -37,14 +37,14 @@
             <section class = "section section3">
                 <p class = "title">{{LANG.section3.title}}</p>
                 <div class = "box">
-                    <img src="../assets/section3-left.png" alt="" class = "section3-left">
+                    <img src="../assets/section3-left.svg" alt="" class = "section3-left">
                     <p class = "label">{{LANG.section3.label1}}</p>
                     <p class = "des">{{LANG.section3.label1_des1}}<br>
                     {{LANG.section3.label1_des2}}
                     </p>
                 </div>
                 <div class = "box">
-                    <img src="../assets/section3-right.png" alt="" class = "section3-right">
+                    <img src="../assets/section3-right.svg" alt="" class = "section3-right">
                     <p class = "label">{{LANG.section3.label2}}</p>
                      <p class = "des">{{LANG.section3.label2_des1}}<br>
                     {{LANG.section3.label2_des2}}
@@ -55,14 +55,14 @@
              <section class = "section section4">
                 <p class = "title">{{LANG.section4.title}}</p>
                 <div class = "box">
-                    <img src="../assets/section4-left.png" alt="" class = "section4-left">
+                    <img src="../assets/section4-left.svg" alt="" class = "section4-left">
                     <p class = "label">{{LANG.section4.label1}}</p>
                      <p class = "des">{{LANG.section4.label1_des1}}<br>
                     {{LANG.section4.label1_des2}}
                     </p>
                 </div>
                 <div class = "box">
-                    <img src="../assets/section4-right.png" alt="" class = "section4-right">
+                    <img src="../assets/section4-right.svg" alt="" class = "section4-right">
                     <p class = "label">{{LANG.section4.label2}}</p>
                      <p class = "des">{{LANG.section4.label2_des1}}<br>
                     {{LANG.section4.label2_des2}}
@@ -73,14 +73,14 @@
              <section class = "section section5">
                 <p class = "title">{{LANG.section5.title}}</p>
                  <div class = "box">
-                    <img src="../assets/section5-left.png" alt="" class = "section5-left">
+                    <img src="../assets/section5-left.svg" alt="" class = "section5-left">
                     <p class = "label">{{LANG.section5.label1}}</p>
                      <p class = "des">{{LANG.section5.label1_des1}}<br>
                     {{LANG.section5.label1_des2}}
                     </p>
                 </div>
                 <div class = "box">
-                    <img src="../assets/section5-right.png" alt="" class = "section5-right">
+                    <img src="../assets/section5-right.svg" alt="" class = "section5-right">
                     <p class = "label">{{LANG.section5.label1}}</p>
                      <p class = "des">{{LANG.section5.label1_des1}}<br>
                     {{LANG.section5.label1_des2}}
