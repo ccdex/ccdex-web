@@ -54,7 +54,6 @@ export default {
   line-height: toRem(317);
   background-color: $black1;
   position: relative;
-//   overflow: hidden;
   .logo {
     width: toRem(489);
     vertical-align: middle;
@@ -63,9 +62,9 @@ export default {
   .menu{
       width:toRem(138);
       height: toRem(138);
-      float: right;
-      margin:toRem(91)toRem(122);
-      vertical-align: middle;
+      position: absolute;
+      top:toRem(80);
+      right:toRem(100);
   }
   ul {
     list-style: none;
