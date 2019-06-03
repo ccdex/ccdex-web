@@ -62,7 +62,22 @@ module.exports = {
     },
 
     footer:{
-
+        section1_title:'Useful Links',
+        section1_link1:'Home',
+        section1_link2:'Exchange',
+        section1_link3:'Wallet',
+        section1_link4:'Explorer',
+        section1_link5:'About',
+        section2_title:'Contact Us',
+        section2_link1:'Telegram',
+        section2_link2:'Wechat',
+        section2_link3:'Email',
+        section3_title:'Social Media',
+        section3_link1:'Linkedin',
+        section3_link2:'Twitter',
+        section3_link3:'Github',
+        section3_link4:'Medium',
+        section3_link5:''
     }
     
   }

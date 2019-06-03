@@ -66,10 +66,22 @@ module.exports = {
     },
 
     footer:{
-       
-
-        
-
+        section1_title:'友情链接',
+        section1_link1:'主页',
+        section1_link2:'交易所',
+        section1_link3:'钱包',
+        section1_link4:'浏览器',
+        section1_link5:'文档',
+        section2_title:'联系我们',
+        section2_link1:'电报群',
+        section2_link2:'微信',
+        section2_link3:'邮件',
+        section3_title:'社交地址',
+        section3_link1:'领英',
+        section3_link2:'推特',
+        section3_link3:'Github',
+        section3_link4:'',
+        section3_link5:'简书'
 
     }
     
