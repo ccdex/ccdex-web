@@ -4,7 +4,7 @@ module.exports = {
       entry2: 'Exchange',
       entry3: 'Wallet',
       entry4: 'Explorer',
-      entry5: 'About',
+      entry5: 'Docs',
       entry6: 'Chinese',
       entry7: 'English'
     },
@@ -67,7 +67,7 @@ module.exports = {
         section1_link2:'Exchange',
         section1_link3:'Wallet',
         section1_link4:'Explorer',
-        section1_link5:'About',
+        section1_link5:'Docs',
         section2_title:'Contact Us',
         section2_link1:'Telegram',
         section2_link2:'Wechat',

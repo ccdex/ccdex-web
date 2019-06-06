@@ -10,7 +10,7 @@
                   <span>{{LANG.section1.label4}}</span>
                 </p>
                 <p class = "sec-label">{{LANG.section1.label2}}</p>
-                <a :href = "config.exchangeUrl" target="_blank" class = "try">{{LANG.section1.btn}}</a>
+                <a :href = "config.walletUrl" target="_blank" class = "try">{{LANG.section1.btn}}</a>
             </div>
             <section class = "section section2">
                 <p class = "title">{{LANG.section2.title}}</p>
